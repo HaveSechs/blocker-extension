@@ -1,21 +1,13 @@
 {
-  "manifest_version": 3,
   "name": "URL Blocker",
-  "version": "0.1",
+  "version": "1.0",
+  "manifest_version": 2,
   "permissions": [
-    "scripting",
     "webRequest",
     "webRequestBlocking",
-    "hostPermissions"
+    "<all_urls>"
   ],
-  "host_permissions": [
-    "https://*/*",
-    "http://*/*"
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  },
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   }
 }
